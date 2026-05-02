@@ -31,15 +31,4 @@ export const team = [
       linkedin: 'https://www.linkedin.com/in/pranjal454/',
     },
   },
-  {
-    id: 4,
-    name: 'Amit Kumar Sharma',
-    role: 'COO',
-    bio: 'Operations leader ensuring seamless event execution and community management. Focused on scaling Hacker\'s Unity nationwide.',
-    avatar: '/team/amitkumar.jpeg',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/amit-kumar-at2/',
-      twitter: 'https://x.com/AK_Sharma02',
-    },
-  },
 ];

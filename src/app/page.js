@@ -115,7 +115,7 @@ export default function Home() {
       <AnimatedSection>
         <section className={`section ${styles.gallerySection}`}>
           <div className="container">
-            <SectionHeading label="Gallery" title="Bootcamp Highlights" subtitle="Glimpses of our community in action" />
+            <SectionHeading label="Gallery" title="Events Highlights" subtitle="Glimpses of our community in action" />
             <div style={{ marginTop: '40px' }}>
               <GalleryCarousel />
             </div>
@@ -132,9 +132,9 @@ export default function Home() {
               <h2 className="heading-lg gradient-text">Join a Global Community of Builders</h2>
               <p className={styles.communitySub}>Connect with thousands of developers, designers, and innovators. Share ideas, get mentorship, and collaborate on projects.</p>
               <div className={styles.communityStats}>
-                <div className={styles.commStat}><Zap size={18} className={styles.commIcon} /><span><strong>50+</strong> Active Channels</span></div>
-                <div className={styles.commStat}><MessageCircle size={18} className={styles.commIcon} /><span><strong>20+</strong> Weekly Events</span></div>
-                <div className={styles.commStat}><Users size={18} className={styles.commIcon} /><span><strong>100+</strong> Mentors</span></div>
+                <div className={styles.commStat}><Zap size={18} className={styles.commIcon} /><span><strong>100+</strong> Active Channels</span></div>
+                <div className={styles.commStat}><MessageCircle size={18} className={styles.commIcon} /><span><strong>20+</strong> Monthly Events</span></div>
+                <div className={styles.commStat}><Users size={18} className={styles.commIcon} /><span><strong>500+</strong> Mentors</span></div>
               </div>
               <Link href="https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t" className="btn btn-primary">Join Our WhatsApp <ArrowRight size={16} /> </Link>
             </div>

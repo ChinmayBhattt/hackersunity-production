@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MessageCircle, Zap, Users, BookOpen, Award, ArrowRight } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
-import GalleryMarquee from '@/components/GalleryMarquee';
+import CommunityGallery from '@/components/CommunityGallery';
 import styles from './community.module.css';
 
 export const metadata = { title: "Community — Hacker's Unity", description: "Join a global community of 10,000+ builders, innovators and hackers." };
@@ -34,7 +34,7 @@ export default function CommunityPage() {
         </AnimatedSection>
         
         <AnimatedSection>
-          <GalleryMarquee />
+          <CommunityGallery />
         </AnimatedSection>
 
         <AnimatedSection>

@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Hacker's Unity — Build. Connect. Innovate.",
+  title: "Hacker's Unity",
   description: "Join 10,000+ developers, students & innovators. Discover hackathons, form teams, and ship real projects with Hacker's Unity.",
   keywords: ['hackathon', 'developer community', 'coding', 'tech events', 'projects', 'innovation'],
   openGraph: {

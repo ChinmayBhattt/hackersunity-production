@@ -12,7 +12,7 @@
 .milestoneYear { font-family: var(--font-mono); font-weight: 700; font-size: 0.875rem; color: var(--accent-primary-light); min-width: 48px; position: absolute; left: -80px; }
 .milestoneDot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent-primary); flex-shrink: 0; position: absolute; left: -48px; box-shadow: 0 0 12px rgba(255, 106, 0,0.4); }
 .milestoneEvent { font-size: 0.9375rem; color: var(--text-secondary); }
-.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+.teamGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); max-width: 900px; margin: 0 auto; }
 .teamCard { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); padding: var(--space-6); }
 .teamAvatarWrapper { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-primary); box-shadow: 0 0 20px rgba(255, 106, 0, 0.2); flex-shrink: 0; }
 .teamAvatar { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }

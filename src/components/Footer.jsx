@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { FaInstagram, FaXTwitter, FaLinkedin, FaWhatsapp, FaYoutube, FaDiscord } from 'react-icons/fa6';
 import styles from './Footer.module.css';
 
@@ -30,6 +30,7 @@ const contacts = [
   { icon: Mail, label: 'Email', value: 'hackerunity.community@gmail.com', href: 'mailto:hackerunity.community@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 8852924002', href: 'tel:+918852924002' },
   { icon: Phone, label: 'Phone', value: '+91 9324264950', href: 'tel:+919324264950' },
+  { icon: MapPin, label: 'Address', value: 'Jaipur, Rajasthan, India', href: 'https://maps.app.goo.gl/dVgHVrKS4NkdNkJS7' },
 ];
 
 export default function Footer() {
