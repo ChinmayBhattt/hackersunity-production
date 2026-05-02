@@ -187,49 +187,6 @@
   background: var(--bg-surface);
 }
 
-.galleryGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-}
-
-.galleryItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  background: var(--glass-bg);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: all var(--transition-base);
-}
-
-.galleryItem:hover {
-  border-color: var(--border-medium);
-  transform: translateY(-4px);
-}
-
-.galleryImagePlaceholder {
-  height: 200px;
-  width: 100%;
-}
-
-.galleryCaption {
-  padding: var(--space-4);
-}
-
-.galleryCaption h4 {
-  font-family: var(--font-heading);
-  font-size: 1.0625rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-1);
-}
-
-.galleryCaption p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
 /* ━━ COMMUNITY ━━ */
 .communitySection {
   display: grid;
@@ -271,28 +228,57 @@
 
 .communityVisual {
   position: relative;
-  min-height: 300px;
-}
-
-.avatarCloud {
-  position: relative;
+  min-height: 400px;
   width: 100%;
-  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
-.floatingAvatar {
+.communityImageWrapper {
   position: absolute;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.8125rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.communityImageWrapper img {
+  border-radius: 20px;
+}
+
+.communityGlassCard {
+  position: absolute;
+  bottom: 24px;
+  left: 24px; /* Using left instead of right to balance */
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 16px 24px;
   color: white;
-  animation: float 3s ease-in-out infinite;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 250px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.communityGlassCard h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.communityGlassCard p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  line-height: 1.4;
 }
 
 /* ━━ PROJECTS ━━ */
@@ -443,7 +429,6 @@
 @media (max-width: 1024px) {
   .hackathonGrid { grid-template-columns: repeat(2, 1fr); }
   .projectGrid { grid-template-columns: repeat(2, 1fr); }
-  .galleryGrid { grid-template-columns: repeat(2, 1fr); }
   .stepsGrid { grid-template-columns: repeat(2, 1fr); }
   .communitySection { grid-template-columns: 1fr; }
   .communityVisual { display: none; }
@@ -457,6 +442,5 @@
 @media (max-width: 640px) {
   .hackathonGrid { grid-template-columns: 1fr; }
   .projectGrid { grid-template-columns: 1fr; }
-  .galleryGrid { grid-template-columns: 1fr; }
   .heroContent { padding: var(--space-12) 0 var(--space-8); }
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, MessageCircle, Zap, UserPlus, Search, Users, Code, Trophy, ChevronRight } from 'lucide-react';
 import ParticleBackground from '@/components/ParticleBackground';
 import TypewriterText from '@/components/TypewriterText';
@@ -16,6 +17,7 @@ import LeaderboardRow from '@/components/LeaderboardRow';
 import LogoMarquee from '@/components/LogoMarquee';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import AnimatedSection from '@/components/AnimatedSection';
+import GalleryCarousel from '@/components/GalleryCarousel';
 import { hackathons, hackathonFilters } from '@/data/hackathons';
 import { events } from '@/data/events';
 import { projects } from '@/data/projects';
@@ -110,28 +112,8 @@ export default function Home() {
         <section className={`section ${styles.gallerySection}`}>
           <div className="container">
             <SectionHeading label="Gallery" title="Bootcamp Highlights" subtitle="Glimpses of our community in action" />
-            <div className={styles.galleryGrid}>
-              <div className={styles.galleryItem}>
-                <div className={styles.galleryImagePlaceholder} style={{ background: 'var(--gradient-hero)' }}></div>
-                <div className={styles.galleryCaption}>
-                  <h4>HU Bootcamp Kickoff</h4>
-                  <p>Where the journey of hackers begins.</p>
-                </div>
-              </div>
-              <div className={styles.galleryItem}>
-                <div className={styles.galleryImagePlaceholder} style={{ background: 'var(--gradient-primary)' }}></div>
-                <div className={styles.galleryCaption}>
-                  <h4>Hands-On Learning</h4>
-                  <p>Building and learning together during the bootcamp.</p>
-                </div>
-              </div>
-              <div className={styles.galleryItem}>
-                <div className={styles.galleryImagePlaceholder} style={{ background: 'var(--gradient-hot)' }}></div>
-                <div className={styles.galleryCaption}>
-                  <h4>Community & Collaboration</h4>
-                  <p>The energy of 10,000+ hackers under one roof.</p>
-                </div>
-              </div>
+            <div style={{ marginTop: '40px' }}>
+              <GalleryCarousel />
             </div>
           </div>
         </section>
@@ -150,20 +132,20 @@ export default function Home() {
                 <div className={styles.commStat}><MessageCircle size={18} className={styles.commIcon} /><span><strong>20+</strong> Weekly Events</span></div>
                 <div className={styles.commStat}><Users size={18} className={styles.commIcon} /><span><strong>100+</strong> Mentors</span></div>
               </div>
-              <Link href="/community" className="btn btn-primary">Join Our Discord <ArrowRight size={16} /></Link>
+              <Link href="https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t" className="btn btn-primary">Join Our WhatsApp <ArrowRight size={16} /> </Link>
             </div>
             <div className={styles.communityVisual}>
-              <div className={styles.avatarCloud}>
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div key={i} className={styles.floatingAvatar} style={{
-                    background: ['#7F77DD','#1D9E75','#F5C875','#E85D6F','#9B94E8','#25C08E'][i % 6],
-                    animationDelay: `${i * 0.3}s`,
-                    left: `${10 + (i % 4) * 22}%`,
-                    top: `${10 + Math.floor(i / 4) * 30}%`,
-                  }}>
-                    {String.fromCharCode(65 + i)}
-                  </div>
-                ))}
+              <div className={styles.communityImageWrapper}>
+                <Image 
+                  src="/gallery/HuTeam.JPG" 
+                  alt="HU Team" 
+                  fill 
+                  style={{ objectFit: 'cover' }} 
+                />
+              </div>
+              <div className={styles.communityGlassCard}>
+                <h4>The Core Team</h4>
+                <p>Building the future of the hacker community.</p>
               </div>
             </div>
           </div>
