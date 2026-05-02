@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Hackathons', href: '/hackathons' },
   { label: 'Community', href: '/community' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Events', href: '/events' },
+  // { label: 'Events', href: '/events' },
   { label: 'Sponsors', href: '/sponsors' },
 ];
 

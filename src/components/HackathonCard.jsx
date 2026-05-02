@@ -1,22 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Clock, Users, Trophy } from 'lucide-react';
-import { getCountdown } from '@/utils/helpers';
+import { Users, Trophy } from 'lucide-react';
 import styles from './HackathonCard.module.css';
 
 export default function HackathonCard({ hackathon }) {
-  const [countdown, setCountdown] = useState(getCountdown(hackathon.deadline));
-
-  useEffect(() => {
-    if (hackathon.status === 'ENDED') return;
-    const timer = setInterval(() => {
-      setCountdown(getCountdown(hackathon.deadline));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [hackathon.deadline, hackathon.status]);
-
   const statusBadge = () => {
     switch (hackathon.status) {
       case 'LIVE':
@@ -29,7 +17,8 @@ export default function HackathonCard({ hackathon }) {
       case 'UPCOMING':
         return <span className="badge badge-upcoming">UPCOMING</span>;
       case 'ENDED':
-        return <span className="badge badge-ended">ENDED</span>;
+      case 'COMPLETED':
+        return <span className="badge badge-ended">COMPLETED</span>;
       default:
         return null;
     }
@@ -66,34 +55,6 @@ export default function HackathonCard({ hackathon }) {
         </div>
       </div>
 
-      {/* Countdown */}
-      {hackathon.status !== 'ENDED' && (
-        <div className={styles.countdown} aria-label={`Deadline countdown: ${countdown.days} days, ${countdown.hours} hours`}>
-          <Clock size={14} />
-          <div className={styles.countdownUnits}>
-            <div className={styles.unit}>
-              <span className={styles.unitValue}>{countdown.days}</span>
-              <span className={styles.unitLabel}>d</span>
-            </div>
-            <span className={styles.separator}>:</span>
-            <div className={styles.unit}>
-              <span className={styles.unitValue}>{String(countdown.hours).padStart(2, '0')}</span>
-              <span className={styles.unitLabel}>h</span>
-            </div>
-            <span className={styles.separator}>:</span>
-            <div className={styles.unit}>
-              <span className={styles.unitValue}>{String(countdown.minutes).padStart(2, '0')}</span>
-              <span className={styles.unitLabel}>m</span>
-            </div>
-            <span className={styles.separator}>:</span>
-            <div className={styles.unit}>
-              <span className={styles.unitValue}>{String(countdown.seconds).padStart(2, '0')}</span>
-              <span className={styles.unitLabel}>s</span>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Tags */}
       <div className={styles.tags}>
         {hackathon.tags.slice(0, 3).map((tag) => (
@@ -104,7 +65,7 @@ export default function HackathonCard({ hackathon }) {
       {/* CTA */}
       <div className={styles.cta}>
         <span className={`btn btn-primary btn-sm ${styles.registerBtn}`}>
-          {hackathon.status === 'ENDED' ? 'View Results' : 'Register Now →'}
+          {hackathon.status === 'ENDED' || hackathon.status === 'COMPLETED' ? 'View Results' : 'Open Now →'}
         </span>
       </div>
     </Link>

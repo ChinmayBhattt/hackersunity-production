@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { MessageCircle, Zap, Users, BookOpen, Award, ArrowRight } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
-import LeaderboardRow from '@/components/LeaderboardRow';
 import AnimatedSection from '@/components/AnimatedSection';
-import { leaderboard } from '@/data/leaderboard';
+import GalleryMarquee from '@/components/GalleryMarquee';
 import styles from './community.module.css';
 
 export const metadata = { title: "Community — Hacker's Unity", description: "Join a global community of 10,000+ builders, innovators and hackers." };
@@ -33,19 +32,17 @@ export default function CommunityPage() {
             ))}
           </div>
         </AnimatedSection>
+        
+        <AnimatedSection>
+          <GalleryMarquee />
+        </AnimatedSection>
+
         <AnimatedSection>
           <div className={styles.joinCta}>
             <h2 className="heading-md gradient-text">Ready to Join?</h2>
-            <p className="text-body">Our Discord is the beating heart of the community. Jump in!</p>
-            <a href="#" className="btn btn-primary btn-lg"><MessageCircle size={18} /> Join Discord <ArrowRight size={16} /></a>
+            <p className="text-body">Our WhatsApp is the beating heart of the community. Jump in!</p>
+            <a href="https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t" className="btn btn-primary btn-lg"><MessageCircle size={18} /> Join WhatsApp Community <ArrowRight size={16} /></a>
           </div>
-        </AnimatedSection>
-      </div></section>
-
-      <section className={`section ${styles.lbSection}`}><div className="container">
-        <AnimatedSection>
-          <SectionHeading label="Leaderboard" title="Top Hackers" subtitle="Earn points by participating in hackathons and events" />
-          <div className={styles.lbCard}>{leaderboard.map(e => <LeaderboardRow key={e.rank} entry={e} />)}</div>
         </AnimatedSection>
       </div></section>
     </>

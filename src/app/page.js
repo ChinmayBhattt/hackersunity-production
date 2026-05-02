@@ -16,6 +16,7 @@ import LogoMarquee from '@/components/LogoMarquee';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import AnimatedSection from '@/components/AnimatedSection';
 import GalleryCarousel from '@/components/GalleryCarousel';
+import GalleryMarquee from '@/components/GalleryMarquee';
 import { hackathons, hackathonFilters } from '@/data/hackathons';
 import { events } from '@/data/events';
 import { projects } from '@/data/projects';
@@ -62,6 +63,8 @@ export default function Home() {
         <LogoMarquee />
       </section>
 
+
+
       {/* ━━ STATS BAR ━━ */}
       <AnimatedSection>
         <section className={styles.statsBar}>
@@ -81,6 +84,11 @@ export default function Home() {
             ))}
           </div>
         </section>
+      </AnimatedSection>
+
+          {/* ━━ GALLERY MARQUEE ━━ */}
+      <AnimatedSection>
+        <GalleryMarquee />
       </AnimatedSection>
 
       {/* ━━ FEATURED HACKATHONS ━━ */}
