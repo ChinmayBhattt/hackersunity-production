@@ -1,0 +1,21 @@
+.hero { padding: var(--space-20) 0 var(--space-10); background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle); }
+.mission { max-width: 700px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: var(--space-4); }
+.valuesSection { background: var(--bg-surface); }
+.valuesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.valueCard { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); }
+.valueIcon { width: 52px; height: 52px; border-radius: var(--radius-md); background: rgba(255, 106, 0,0.1); border: 1px solid rgba(255, 106, 0,0.2); color: var(--accent-primary-light); display: flex; align-items: center; justify-content: center; }
+.valueTitle { font-family: var(--font-heading); font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); }
+.valueDesc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+.timeline { display: flex; flex-direction: column; gap: var(--space-6); max-width: 600px; margin: 0 auto; position: relative; padding-left: var(--space-12); }
+.timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border-medium); }
+.milestone { display: flex; align-items: center; gap: var(--space-4); position: relative; }
+.milestoneYear { font-family: var(--font-mono); font-weight: 700; font-size: 0.875rem; color: var(--accent-primary-light); min-width: 48px; position: absolute; left: -80px; }
+.milestoneDot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent-primary); flex-shrink: 0; position: absolute; left: -48px; box-shadow: 0 0 12px rgba(255, 106, 0,0.4); }
+.milestoneEvent { font-size: 0.9375rem; color: var(--text-secondary); }
+.teamGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.teamCard { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); }
+.teamAvatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem; color: white; }
+.teamName { font-family: var(--font-heading); font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); }
+.teamRole { font-size: 0.8125rem; color: var(--accent-primary-light); font-weight: 500; }
+.teamBio { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; }
+@media (max-width: 768px) { .valuesGrid { grid-template-columns: 1fr; } .teamGrid { grid-template-columns: 1fr; } }
