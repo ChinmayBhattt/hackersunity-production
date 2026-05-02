@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Phone, Mail, MessageSquare, Video, Camera, AtSign, Briefcase, MessageCircle } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+import { FaInstagram, FaXTwitter, FaLinkedin, FaWhatsapp, FaYoutube, FaDiscord } from 'react-icons/fa6';
 import styles from './Footer.module.css';
 
 const footerLinks = {
@@ -17,12 +18,12 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Camera, label: 'Instagram', handle: '@hackerunity', href: 'https://instagram.com/hackerunity' },
-  { icon: AtSign, label: 'Twitter (X)', handle: '@Hackers_Unity', href: 'https://twitter.com/Hackers_Unity' },
-  { icon: Briefcase, label: 'LinkedIn', handle: '@hackerunity', href: 'https://linkedin.com/company/hackerunity' },
-  { icon: Video, label: 'YouTube', handle: '@hackerunity', href: 'https://youtube.com/@hackerunity' },
-  { icon: MessageSquare, label: 'WhatsApp', handle: 'Community Group', href: 'https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t' },
-  { icon: MessageCircle, label: 'Discord', handle: 'Join Server', href: 'https://discord.com/invite/xcNNqdDhce' },
+  { icon: FaInstagram, label: 'Instagram', handle: '@hackerunity', href: 'https://instagram.com/hackerunity' },
+  { icon: FaXTwitter, label: 'Twitter (X)', handle: '@Hackers_Unity', href: 'https://twitter.com/Hackers_Unity' },
+  { icon: FaLinkedin, label: 'LinkedIn', handle: '@hackerunity', href: 'https://linkedin.com/company/hackerunity' },
+  { icon: FaYoutube, label: 'YouTube', handle: '@hackerunity', href: 'https://youtube.com/@hackerunity' },
+  { icon: FaWhatsapp, label: 'WhatsApp', handle: 'Community Group', href: 'https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t' },
+  { icon: FaDiscord, label: 'Discord', handle: 'Join Server', href: 'https://discord.com/invite/xcNNqdDhce' },
 ];
 
 const contacts = [
@@ -96,7 +97,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className={styles.bottomBar}>
         <div className="container">
-          <p>Built with ❤️ for the hacker community · © {new Date().getFullYear()} Hacker&apos;s Unity</p>
+          <p>© {new Date().getFullYear()} Hacker&apos;s Unity All rights reserved.</p>
         </div>
       </div>
     </footer>
