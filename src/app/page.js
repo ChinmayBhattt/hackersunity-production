@@ -12,8 +12,6 @@ import FilterTabs from '@/components/FilterTabs';
 import HackathonCard from '@/components/HackathonCard';
 import ProjectCard from '@/components/ProjectCard';
 import EventCard from '@/components/EventCard';
-import TestimonialCard from '@/components/TestimonialCard';
-import LeaderboardRow from '@/components/LeaderboardRow';
 import LogoMarquee from '@/components/LogoMarquee';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -21,8 +19,6 @@ import GalleryCarousel from '@/components/GalleryCarousel';
 import { hackathons, hackathonFilters } from '@/data/hackathons';
 import { events } from '@/data/events';
 import { projects } from '@/data/projects';
-import { testimonials } from '@/data/testimonials';
-import { leaderboard } from '@/data/leaderboard';
 import { sponsors } from '@/data/sponsors';
 import styles from './page.module.css';
 
@@ -47,9 +43,9 @@ export default function Home() {
         <ParticleBackground />
         <div className={styles.heroGradient} />
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>🔥 500+ Hackers Joined This Month</span>
+          <span className={styles.heroBadge}>Global Tech Community</span>
           <h1 className={`heading-xl ${styles.heroTitle}`}>
-            Hacker&apos;s Unity | India&apos;s Fastest-Growing Tech Community
+            Hacker&apos;s Unity is India&apos;s Fastest-Growing Tech Community
           </h1>
           <p className={styles.heroSub}>
             Hacker&apos;s Unity is India&apos;s Fastest Growing tech community that brings together developers, innovators, and technology enthusiasts. Its mission is to empower students with real-world skills and connect them with industry opportunities.
@@ -91,7 +87,7 @@ export default function Home() {
       <AnimatedSection>
         <section className="section">
           <div className="container">
-            <SectionHeading label="Hackathons" title="Live & Upcoming Hackathons" subtitle="Discover the best hackathons and build something amazing" />
+            <SectionHeading label="Hackathons" title="Live & Upcoming Hackathons & Events" subtitle="Discover the best hackathons and build something amazing" />
             <FilterTabs tabs={hackathonFilters} activeTab={activeFilter} onChange={setActiveFilter} />
             <div className={styles.hackathonGrid}>
               {filteredHackathons.map((h) => (
@@ -169,55 +165,11 @@ export default function Home() {
         </section>
       </AnimatedSection>
 
-      {/* ━━ UPCOMING EVENTS ━━ */}
-      <AnimatedSection>
-        <section className="section">
-          <div className="container">
-            <SectionHeading label="Events" title="Upcoming Events" subtitle="Workshops, meetups, contests, and more" />
-            <div className={styles.eventsScroll}>
-              {events.slice(0, 5).map((e) => (
-                <EventCard key={e.id} event={e} />
-              ))}
-            </div>
-            <div className={styles.viewAll}>
-              <Link href="/events" className="btn btn-ghost">View All Events <ChevronRight size={16} /></Link>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
 
-      {/* ━━ LEADERBOARD ━━ */}
-      <AnimatedSection>
-        <section className={`section ${styles.howSection}`}>
-          <div className="container">
-            <SectionHeading label="Leaderboard" title="Top Hackers This Month" subtitle="Earn points by participating in hackathons and events" />
-            <div className={styles.leaderboardCard}>
-              {leaderboard.slice(0, 5).map((entry) => (
-                <LeaderboardRow key={entry.rank} entry={entry} />
-              ))}
-            </div>
-            <div className={styles.viewAll}>
-              <Link href="/community" className="btn btn-ghost">View Full Leaderboard <ChevronRight size={16} /></Link>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
 
-      {/* ━━ TESTIMONIALS ━━ */}
-      <AnimatedSection>
-        <section className="section">
-          <div className="container">
-            <SectionHeading label="Testimonials" title="Hear From Our Community" subtitle="Real stories from real hackers" />
-          </div>
-          <div className={styles.testimonialScroll}>
-            <div className={styles.testimonialTrack}>
-              {[...testimonials, ...testimonials].map((t, i) => (
-                <TestimonialCard key={`${t.id}-${i}`} testimonial={t} />
-              ))}
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
+
+
+
 
       {/* ━━ EVENT ORGANIZATION ━━ */}
       <AnimatedSection>

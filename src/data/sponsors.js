@@ -2,9 +2,9 @@ export const sponsors = {
   sponsors: [
     { name: 'BlackHat', logo: 'BH', website: '#', description: 'Cybersecurity training and events.' },
     { name: 'Free Website Guys', logo: 'FWG', website: '#', description: 'Professional website development.' },
-    { name: 'Gully Meals', logo: 'GM', website: '#', description: 'Food and beverage partner.' },
+    { name: 'Duality', logo: 'GM', website: '#', description: 'Food and beverage partner.' },
     { name: 'Hive Bharat', logo: 'HB', website: '#', description: 'Web3 and blockchain ecosystem.' },
-    { name: 'Financial Friend', logo: 'FF', website: '#', description: 'Financial literacy and support.' },
+    { name: 'InterviewBudyy', logo: 'FF', website: '#', description: 'Financial literacy and support.' },
     { name: 'Devfolio', logo: 'DF', website: 'https://devfolio.co', description: 'Hackathon platform and community.' },
     { name: 'ETHIndia', logo: 'ETH', website: 'https://ethindia.co', description: 'Ethereum hackathon and ecosystem.' },
   ],
@@ -15,6 +15,6 @@ export const sponsors = {
 };
 
 export const sponsorLogos = [
-  'BlackHat', 'Free Website Guys', 'Gully Meals', 'Hive Bharat', 'Financial Friend', 'Devfolio', 'ETHIndia',
+  'BlackHat', 'Free Website Guys', 'Duality', 'Hive Bharat', 'InterviewBudyy', 'Devfolio', 'ETHIndia',
   'Nextease Solutions', 'Trainzex AI'
 ];

@@ -307,36 +307,8 @@
   border-radius: var(--radius-full);
 }
 
-/* ━━ LEADERBOARD ━━ */
-.leaderboardCard {
-  max-width: 700px;
-  margin: 0 auto;
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
 
-/* ━━ TESTIMONIALS ━━ */
-.testimonialScroll {
-  overflow: hidden;
-  width: 100%;
-}
 
-.testimonialTrack {
-  display: flex;
-  gap: var(--space-6);
-  animation: marquee 40s linear infinite;
-  width: max-content;
-}
-
-.testimonialTrack:hover {
-  animation-play-state: paused;
-}
 
 /* ━━ HOST AN EVENT ━━ */
 .hostSection {
