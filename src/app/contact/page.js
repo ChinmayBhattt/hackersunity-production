@@ -54,6 +54,7 @@ export default function ContactPage() {
               <div className={styles.infoList}>
                 <div className={styles.infoItem}><Mail size={18} /><div><p className={styles.infoLabel}>Email</p><p><a href="mailto:hackerunity.community@gmail.com">hackerunity.community@gmail.com</a></p></div></div>
                 <div className={styles.infoItem}><Phone size={18} /><div><p className={styles.infoLabel}>Phone</p><p><a href="tel:+918852924002">+91 8852924002</a></p></div></div>
+                <div className={styles.infoItem}><Phone size={18} /><div><p className={styles.infoLabel}>Phone</p><p><a href="tel:+919324264950">+91 9324264950</a></p></div></div>
                 <div className={styles.infoItem}><MessageCircle size={18} /><div><p className={styles.infoLabel}>Discord</p><p><a href="https://discord.com/invite/xcNNqdDhce" target="_blank" rel="noopener noreferrer">Join our Server</a></p></div></div>
                 <div className={styles.infoItem}><MessageSquare size={18} /><div><p className={styles.infoLabel}>WhatsApp</p><p><a href="https://chat.whatsapp.com/JqVKrBiZIdND1n40ffErw3?mode=gi_t" target="_blank" rel="noopener noreferrer">Community Group</a></p></div></div>
               </div>

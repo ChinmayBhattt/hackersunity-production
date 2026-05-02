@@ -13,7 +13,7 @@ const footerLinks = {
   Legal: [
     { label: 'Privacy Policy', href: '#' },
     { label: 'Terms of Service', href: '#' },
-    { label: 'Code of Conduct', href: '#' },
+    // { label: 'Code of Conduct', href: '#' },
   ],
 };
 
@@ -29,6 +29,7 @@ const socials = [
 const contacts = [
   { icon: Mail, label: 'Email', value: 'hackerunity.community@gmail.com', href: 'mailto:hackerunity.community@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 8852924002', href: 'tel:+918852924002' },
+  { icon: Phone, label: 'Phone', value: '+91 9324264950', href: 'tel:+919324264950' },
 ];
 
 export default function Footer() {

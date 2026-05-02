@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import { Target, Heart, Lightbulb, Globe, Rocket, Shield } from 'lucide-react';
+import { FaLinkedinIn, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
 import { team } from '@/data/team';
-import { getInitials, getRandomBrandColor } from '@/utils/helpers';
 import styles from './about.module.css';
 
 export const metadata = { title: "About — Hacker's Unity", description: "Learn about Hacker's Unity's mission to empower the next generation of builders." };
@@ -25,16 +26,22 @@ export default function AboutPage() {
     { year: '2026', event: '10,000+ members, ₹50L+ in prizes distributed' },
   ];
 
+  const socialIcons = {
+    linkedin: FaLinkedinIn,
+    twitter: FaXTwitter,
+    instagram: FaInstagram,
+  };
+
   return (
     <>
       <section className={styles.hero}><div className="container"><AnimatedSection>
-        <SectionHeading label="About Us" title="Empowering the Next Generation of Builders" subtitle="Hacker's Unity is on a mission to make hackathons and tech communities accessible to everyone." />
+        <SectionHeading label="About Us" title="Empowering the Next Generation of Builders" subtitle="Hacker's Unity is building a global developer community where students and developers don't just build projects — they build products." />
       </AnimatedSection></div></section>
 
       <section className="section"><div className="container"><AnimatedSection>
         <div className={styles.mission}>
-          <h2 className="heading-md gradient-text">Our Mission</h2>
-          <p className="text-body">We believe that the best way to learn is by building. Hacker&apos;s Unity connects aspiring developers, designers, and innovators with hackathons, mentors, and a supportive community. We&apos;re building the largest and most inclusive hacker community in India.</p>
+          <h2 className="heading-md gradient-text">Our Vision</h2>
+          <p className="text-body">Hacker&apos;s Unity&apos;s vision is to build a global developer community where students and developers don&apos;t just create projects — they create products. Through the Hacker&apos;s Unity network, we connect builders with funding, investment opportunities, and the resources they need to turn their ideas into reality.</p>
         </div>
       </AnimatedSection></div></section>
 
@@ -64,9 +71,22 @@ export default function AboutPage() {
         <SectionHeading label="Team" title="Meet the Team" subtitle="The people behind Hacker's Unity" />
         <div className={styles.teamGrid}>{team.map(m => (
           <div key={m.id} className={`glass-card ${styles.teamCard}`}>
-            <div className={styles.teamAvatar} style={{ background: getRandomBrandColor(m.id) }}>{getInitials(m.name)}</div>
+            <div className={styles.teamAvatarWrapper}>
+              <Image src={m.avatar} alt={m.name} width={96} height={96} className={styles.teamAvatar} />
+            </div>
             <h3 className={styles.teamName}>{m.name}</h3>
             <span className={styles.teamRole}>{m.role}</span>
+            <div className={styles.teamSocials}>
+              {Object.entries(m.social).map(([platform, url]) => {
+                const Icon = socialIcons[platform];
+                if (!Icon || url === '#') return null;
+                return (
+                  <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label={`${m.name} on ${platform}`}>
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
+            </div>
             <p className={styles.teamBio}>{m.bio}</p>
           </div>
         ))}</div>
